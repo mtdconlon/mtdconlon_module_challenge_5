@@ -100,7 +100,7 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
-  alert("Hello, This is a test")
+  prompt("Hello, This is a test")
 }
 
 // Get references to the #generate element
