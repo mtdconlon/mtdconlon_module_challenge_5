@@ -1,4 +1,5 @@
 // Array of special characters to be included in password
+// Function to generate password with user input
 function generatePassword() {
   var specialCharacters = [
     '@',
@@ -90,15 +91,16 @@ function generatePassword() {
   ];
 
   noOfChar = prompt("No. Of Characters Required? (10 - 64)");
-  if (noOfChar < 10 || noOfChar > 64) {
-    alert("Invalid");
-  } else if (isNaN(noOfChar)) {
-    noOfChar = prompt("Please enter a valid number")
+  if (noOfChar < 10) {
+    noOfChar = alert("Invalid");
+  } else if (noOfChar > 64) {
+    noOfChat = alert("Invalid")
   } else {
-    alert("Your Password: " + noOfChar + Characters)
+    noOfChar = alert("Your Password Will Be " + noOfChar + " Characters")
   }
 }
 
+generatePassword();
 
 // Function to prompt user for password options
 function getPasswordOptions() {
