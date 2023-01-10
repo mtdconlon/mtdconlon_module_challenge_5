@@ -31,14 +31,14 @@ Once all prompts are answered, the password should be generated and displayed in
 
 ## Deployment Links
 **Submission URL**
-- https://mtdconlon.github.io/console-finances/
+- https://mtdconlon.github.io/mtdconlon_module_challenge_5/
 
 **GitHub Repo URL**
 - https://github.com/mtdconlon/mtdconlon_module_challenge_5
 
 ## Screenshot
 Webpage Screenshot
-![example image](/assets/images/console_finances_screenshot.png)
+![example image](/assets/Screenshot%202023-01-10%20at%2022.26.31.png)
 
 ## License
 The licence assigned to this project is GPL-3.0 license.
