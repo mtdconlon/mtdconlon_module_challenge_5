@@ -90,17 +90,40 @@ function generatePassword() {
     'Z'
   ];
 
+  //Browser prompt to establish users character preference
   noOfChar = prompt("No. Of Characters Required? (10 - 64)");
   if (noOfChar < 10) {
     noOfChar = alert("Invalid");
   } else if (noOfChar > 64) {
-    noOfChat = alert("Invalid")
+    noOfChat = alert("Invalid");
   } else {
-    noOfChar = alert("Your Password Will Be " + noOfChar + " Characters")
+    noOfChar = alert("Your Password Will Be " + noOfChar + " Characters");
   }
-}
 
-generatePassword();
+  charLowercase = confirm("Would You Like Lowercase Characters");
+  if (confirm) {
+    charLowercase = alert("Password Will Contain Lowercase Characters");
+  } else {
+    charLowercase = alert("Password Will Not Contain Lowercase Characters");
+  }
+
+  charUppercase = confirm("Would You Like Uppercase Characters");
+  if (confirm) {
+    charUppercase = alert("Password Will Contain Uppercase Characters");
+  } else {
+    charUppercase = alert("Password Will Not Contain Uppercase Characters");
+  }
+
+  charNumber = confirm("Would You Like Numerical Characters");
+  if (confirm) {
+    charUppercase = alert("Password Will Contain Numerical Characters");
+  } else {
+    charUppercase = alert("Password Will Not Contain Numerical Characters");
+  }
+
+};
+
+
 
 // Function to prompt user for password options
 function getPasswordOptions() {
@@ -112,7 +135,6 @@ function getRandom(arr) {
 
 }
 
-// Function to generate password with user input
 
 
 // Get references to the #generate element
