@@ -90,7 +90,7 @@ function generatePassword() {
     'Z'
   ];
 
-  //Browser prompt to establish users character preference
+  //Browser prompt to establish users character length preference
   noOfChar = prompt("No. Of Characters Required? (10 - 64)");
   if (noOfChar < 10) {
     noOfChar = alert("Invalid");
@@ -100,25 +100,35 @@ function generatePassword() {
     noOfChar = alert("Your Password Will Be " + noOfChar + " Characters");
   }
 
-  charLowercase = confirm("Would You Like Lowercase Characters");
-  if (confirm) {
+  //Browser prompt to establish users lowercase character preference
+  charLowercase = confirm("Would You Like Lowercase Characters?");
+  if (charLowercase) {
     charLowercase = alert("Password Will Contain Lowercase Characters");
   } else {
     charLowercase = alert("Password Will Not Contain Lowercase Characters");
   }
-
-  charUppercase = confirm("Would You Like Uppercase Characters");
-  if (confirm) {
+  //Browser prompt to establish users uppercase character preference
+  charUppercase = confirm("Would You Like Uppercase Characters?");
+  if (charUppercase) {
     charUppercase = alert("Password Will Contain Uppercase Characters");
   } else {
     charUppercase = alert("Password Will Not Contain Uppercase Characters");
   }
 
-  charNumber = confirm("Would You Like Numerical Characters");
-  if (confirm) {
-    charUppercase = alert("Password Will Contain Numerical Characters");
+  //Browser prompt to establish users numerical character preference
+  charNumber = confirm("Would You Like Numerical Characters?");
+  if (charNumber) {
+    charNumber = alert("Password Will Contain Numerical Characters");
   } else {
-    charUppercase = alert("Password Will Not Contain Numerical Characters");
+    charNumber = alert("Password Will Not Contain Numerical Characters");
+  }
+
+  //Browser prompt to establish users numerical character preference
+  charSpecial = confirm("Would You Like Special Characters?");
+  if (charNumber) {
+    charSpecial = alert("Password Will Contain Special Characters");
+  } else {
+    charSpecial = alert("Password Will Not Contain Special Characters");
   }
 
 };
