@@ -155,9 +155,9 @@ function generatePassword() {
     var inputPassword = ""
     for (let i = 0; i < noOfChar; i++ ) {
       var arr = [Math.floor(Math.random() * emptyPassword.length)];
-      emptyPassword = emptyPassword + noOfChar[arr]
+      inputPassword = inputPassword + noOfChar[arr]
     }
-  return emptyPassword;
+  return inputPassword;
   }
 };
 
