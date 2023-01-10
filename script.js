@@ -89,6 +89,7 @@ function generatePassword() {
     'Y',
     'Z'
   ];
+  var emptyPassword = [];
 
   //Browser prompt to establish users character length preference
   noOfChar = prompt("No. Of Characters Required? (10 - 64)");
@@ -123,27 +124,41 @@ function generatePassword() {
     charNumber = alert("Password Will Not Contain Numerical Characters");
   }
 
-  //Browser prompt to establish users numerical character preference
+  //Browser prompt to establish users special character preference
   charSpecial = confirm("Would You Like Special Characters?");
-  if (charNumber) {
+  if (charSpecial) {
     charSpecial = alert("Password Will Contain Special Characters");
   } else {
     charSpecial = alert("Password Will Not Contain Special Characters");
   }
 
+  //Alert to show if no variations have been selected, the user must select one
+  if (charSpecial === false) {
+    return ("Select One Variation")
+  }
 };
-
 
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-
-}
+  if (charLowercase) {
+    emptyPassword = emptypassword.concat(lowerCasedCharacters);
+  }if (charUppercase) {
+    emptyPassword = emptypassword.concat(upperCasedCharacters);
+  } if (charNumber) {
+    emptyPassword = emptypassword.concat(numericCharacters);
+  } if (charSpecial) {
+    emptyPassword = emptypassword.concat(specialCharacters);
+  }
+};
 
 // Function for getting a random element from an array
-function getRandom(arr) {
+  function random_item(arr) {
+  return arr[Math.floor(Math.random()*arr.length)]; 
+} 
+  var arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']; 
+  console.log(random_item(arr));
 
-}
 
 
 
