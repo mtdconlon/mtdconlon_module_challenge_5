@@ -159,9 +159,6 @@ function getPasswordOptions() {
   var arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']; 
   console.log(random_item(arr));
 
-
-
-
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 
