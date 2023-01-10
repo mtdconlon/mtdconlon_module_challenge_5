@@ -133,31 +133,35 @@ function generatePassword() {
   }
 
   //Alert to show if no variations have been selected, the user must select one
-  if (charSpecial === false) {
-    return ("Select One Variation")
+  if (charSpecial === false && charNumber === false && charUppercase === false && charLowercase === false) {
+    console.log ("Select One Variation");
   }
-};
 
+  // Function to prompt user for password options
+  function getPasswordOptions() {
+    if (charLowercase) {
+      emptyPassword = emptypassword.concat(lowerCasedCharacters);
+    } if (charUppercase) {
+      emptyPassword = emptypassword.concat(upperCasedCharacters);
+    } if (charNumber) {
+      emptyPassword = emptypassword.concat(numericCharacters);
+    } if (charSpecial) {
+      emptyPassword = emptypassword.concat(specialCharacters);
+    }
+  };
 
-// Function to prompt user for password options
-function getPasswordOptions() {
-  if (charLowercase) {
-    emptyPassword = emptypassword.concat(lowerCasedCharacters);
-  }if (charUppercase) {
-    emptyPassword = emptypassword.concat(upperCasedCharacters);
-  } if (charNumber) {
-    emptyPassword = emptypassword.concat(numericCharacters);
-  } if (charSpecial) {
-    emptyPassword = emptypassword.concat(specialCharacters);
-  }
-};
-
-// Function for getting a random element from an array
+  // Function for getting a random element from an array
   function random_item(arr) {
-  return arr[Math.floor(Math.random()*arr.length)]; 
-} 
-  var arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']; 
-  console.log(random_item(arr));
+    var inputPassword = ""
+    for (let i = 0; i < noOfChar; i++ ) {
+      var arr = [Math.floor(Math.random() * emptyPassword.length)];
+      emptyPassword = emptyPassword + noOfChar[arr]
+    }
+  return emptyPassword;
+  }
+};
+
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
