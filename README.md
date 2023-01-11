@@ -38,7 +38,7 @@ Once all prompts are answered, the password should be generated and displayed in
 
 ## Screenshot
 Webpage Screenshot
-![example image](/assets/Screenshot%202023-01-10%20at%2022.26.31.png)
+![example image](/assets/Screenshot%202023-01-11%20at%2011.19.04.png)
 
 ## License
 The licence assigned to this project is GPL-3.0 license.
